@@ -2,25 +2,26 @@
 
 <head>
     <meta charset="utf-8">
-    <title>小孙同学</title>
+    <title>小徐老师</title>
     <meta name="language" content="zh-CN">
-    <meta name="title" content="小孙同学">
-    <meta name="github" content="https://github.com/sun0225SUN/Awesome-Love-Code">
-    <meta name="describe" content="收集不易，您的star是我坚持的动力，同时也欢迎各位PR哦! ">
+    <meta name="title" content="小徐老师">
+    <meta name="github" content="https://github.com/xiangpingtang/xuzhangyi1">
+    <meta name="describe" content="Ping">
     <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/sun0225SUN/photos/img/20210715233345.png">
     <link href="css/hovertreewelcome.css" type="text/css" rel="stylesheet">
 </head>
 
 <body>
-    <div id="hovertreecontainer">
+    <div id="hovertreecontainer" onclick="playAudio()">
 
         <div>
-            <h1 id="h1">小孙同学</h1>
+            <h1 id="h1">小徐老师</h1>
             <br>
-            <h2 id="h2">愿与你长相厮守</h2>
+            <h2 id="h2">我喜欢你</h2>
             <br>
             <h3 id="h2">真诚之中，与你相识相知，灵犀之间，与你朝夕相伴。</h3>
-            <p>&nbsp;</p>
+            <br>
+            <p>Ping ❤️ 吃饭大王</p>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
@@ -31,10 +32,8 @@
     </div>
 
     <canvas id="canvas"></canvas>
-    <audio autoplay="autoplay">
-        <source src="index_1.html" type="audio/mpeg">
-        您的浏览器不支持播放音乐。请用支持html5的浏览器打开,例如chrome或火狐或者新版IE等。
-
+    <audio id="bgMusic" autoplay="autoplay">
+        <source src="./bgMusic.mp3" type="audio/mpeg">
     </audio>
     <script type="text/javascript" src="js/hovertreewelcome.js">
     </script>
@@ -303,7 +302,7 @@
                 el.innerHTML = heading;
                 setTimeout(function () {
                     el.className = 'transition-in';
-                }, (Math.random() * 500) + 500);
+                }, (Math.random() * 1000) + 1000);
             }
 
             function save() {
@@ -394,21 +393,14 @@
                     document.body.appendChild(ctx.stats.domElement);
                 }
             };
-
         })(window);
-
+   
+        // 播放音乐
+        function playAudio() {
+            var audio = document.getElementById('bgMusic');
+            audio.play();
+        }
     </script>
-    <div style="display:none">
-        <script>
-            var _hmt = _hmt || [];
-            (function () {
-                var hm = document.createElement("script");
-                hm.src = "https://hm.baidu.com/hm.js?3568997ab3a480640571c3fd2c7a949b";
-                var s = document.getElementsByTagName("script")[0];
-                s.parentNode.insertBefore(hm, s);
-            })();
-        </script>
-    </div>
 </body>
 
 </html>
